@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'//自己添加
 
 android {
     compileSdkVersion 23
@@ -26,5 +27,9 @@ dependencies {
 
     compile 'im.fir:fir-sdk:latest.integration@aar'//FIR依赖
 
-    //compile 'com.fasterxml.jackson.datatype:jackson-datatype-pcollections:2.7.2'//jackson依赖
+    compile 'com.fasterxml.jackson.datatype:jackson-datatype-pcollections:2.7.2'//jackson依赖
+
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+        transitive = true;
+    }
 }
