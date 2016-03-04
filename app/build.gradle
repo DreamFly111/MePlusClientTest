@@ -18,18 +18,24 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }//这个是为了为添加Jackson.jar包而添加的，以防出错
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.2.0'
-
-    compile 'im.fir:fir-sdk:latest.integration@aar'//FIR依赖
-
-    compile 'com.fasterxml.jackson.datatype:jackson-datatype-pcollections:2.7.2'//jackson依赖
-
+    compile 'im.fir:fir-sdk:latest.integration@aar'
+    //FIR依赖
+    compile 'com.fasterxml.jackson.datatype:jackson-datatype-pcollections:2.7.2'
+    //jackson依赖
     compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
         transitive = true;
     }
+    compile files('libs/jackson-annotations-2.7.0.jar')
+    compile files('libs/jackson-databind-2.4.5.jar')
 }

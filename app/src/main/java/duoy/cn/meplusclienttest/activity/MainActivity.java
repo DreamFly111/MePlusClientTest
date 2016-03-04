@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onStart() {
-                //super.onStart();
+                //super.onStart();//需要重写，所以要去除super
 
                 Toast.makeText(getApplicationContext(), "正在获取", Toast.LENGTH_SHORT).show();
             }

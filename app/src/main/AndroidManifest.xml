@@ -24,7 +24,7 @@
 
         <meta-data
             android:name="io.fabric.ApiKey"
-            android:value="9fbcf46a17338c0ed7859bc5de7a96c85313f88d" />
+            android:value="9fbcf46a17338c0ed7859bc5de7a96c85313f88d" />//没有自己申请？
 
         <meta-data
             android:name="BUG_HD_SDK_GENERAL_KEY"
