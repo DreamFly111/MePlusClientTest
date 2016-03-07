@@ -20,9 +20,16 @@ android {
     }
 
     packagingOptions {
-        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE'//这个是为了为添加Jackson.jar包而添加的，以防出错
         exclude 'META-INF/LICENSE'
-    }//这个是为了为添加Jackson.jar包而添加的，以防出错
+
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
@@ -38,4 +45,14 @@ dependencies {
     }
     compile files('libs/jackson-annotations-2.7.0.jar')
     compile files('libs/jackson-databind-2.4.5.jar')
+
+    compile 'com.marvinlabs:android-intents:1.5.1@aar'
+    compile 'cn.trinea.android.common:trinea-android-common:4.2.15'
+
+    //avoscloud-sdk 为 LeanCloud基础包
+    compile 'cn.leancloud.android:avoscloud-sdk:v3.+'
+
+    compile 'me.dm7.barcodescanner:zbar:1.8.4'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
 }

@@ -3,7 +3,7 @@ package duoy.cn.meplusclienttest.model;
 public class FirVersion {
 
     public String name;//"MePlusClient",
-    public String version;//"1",
+    public int version;//"1",
     public String changelog;//"First release",
     public String updated_at;//1456829748,
     public String versionShort;//"1.0",
