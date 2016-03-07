@@ -3,6 +3,7 @@ package duoy.cn.meplusclienttest.fragments;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,11 +16,13 @@ import me.dm7.barcodescanner.zbar.Result;
 import me.dm7.barcodescanner.zbar.ZBarScannerView;
 
 public class SimpleScannerFragment extends Fragment implements ZBarScannerView.ResultHandler {
+    //返回的源代码中的基础类的简单名称。如果是匿名的基础类，则返回一个空字符串。
     private static final String TAG = SimpleScannerFragment.class.getSimpleName();
     private ZBarScannerView mScannerView;
 
     public static SimpleScannerFragment newInstance() {
         SimpleScannerFragment fragment = new SimpleScannerFragment();
+        Log.i(TAG,"@@"+TAG+"##");//TAG===SimpleScannerFragment
         return fragment;
     }
 

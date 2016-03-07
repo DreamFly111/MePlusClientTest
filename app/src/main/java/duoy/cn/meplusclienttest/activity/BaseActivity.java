@@ -1,5 +1,6 @@
 package duoy.cn.meplusclienttest.activity;
 
+import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,5 +32,10 @@ public class BaseActivity extends AppCompatActivity {
         final FragmentTransaction transaction = fragmentManager.beginTransaction();//开启事务
         transaction.replace(containerViewId ,fragment);
         transaction.commitAllowingStateLoss();
+    }
+
+    public void findFragmentById(int containerViewId){
+        final FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.findFragmentById(containerViewId);
     }
 }

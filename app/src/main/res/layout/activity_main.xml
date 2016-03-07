@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity.MainActivity">
+    tools:context=".activity.MainActivity"
+    android:orientation="vertical">
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/btnPNTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TestPN"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/btnAgoraTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TestAgora"
+        android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/btnRQTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TestQR"
+        android:layout_gravity="center"/>
+
+
+
+</LinearLayout>

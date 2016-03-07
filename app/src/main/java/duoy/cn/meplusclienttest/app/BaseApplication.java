@@ -16,7 +16,7 @@ public class BaseApplication extends Application {
     public void onCreate() {
         super.onCreate();
         FIR.init(this);
-        Fabric.with(this, new Crashlytics());
+        Fabric.with(this, new Crashlytics());//统计崩溃
 
         AVObject.registerSubclass(User.class);
         AVOSCloud.initialize(this, Constants.AVOS_APP_ID,Constants.AVOS_APP_KEY);

@@ -12,7 +12,6 @@ public class LogoActivity extends BaseActivity implements Handler.Callback {
     private static final String TAG = LogoActivity.class.getSimpleName();
     private Handler mHandler;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
