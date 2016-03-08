@@ -53,7 +53,10 @@
             android:name="BUG_HD_SDK_GENERAL_KEY"
             android:value="6a26acee7cf272cb9a514bda6050e49b" />
 
-        <activity android:name=".activity.LogoActivity">
+        <activity
+            android:name=".activity.LogoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/StartAppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -66,9 +69,9 @@
         <activity
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait"/>
-       <!-- <activity
+        <activity
             android:name=".activity.BaseActivity"
-            android:screenOrientation="portrait"/>-->
+            android:screenOrientation="portrait"/>
 
         <!-- agora -->
         <activity
