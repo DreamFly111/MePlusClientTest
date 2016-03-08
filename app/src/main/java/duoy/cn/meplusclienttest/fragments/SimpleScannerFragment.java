@@ -15,14 +15,21 @@ import me.dm7.barcodescanner.zbar.BarcodeFormat;
 import me.dm7.barcodescanner.zbar.Result;
 import me.dm7.barcodescanner.zbar.ZBarScannerView;
 
-public class SimpleScannerFragment extends Fragment implements ZBarScannerView.ResultHandler {
+public class SimpleScannerFragment extends BaseFragment implements ZBarScannerView.ResultHandler {
     //返回的源代码中的基础类的简单名称。如果是匿名的基础类，则返回一个空字符串。
     private static final String TAG = SimpleScannerFragment.class.getSimpleName();
     private ZBarScannerView mScannerView;
 
-    public static SimpleScannerFragment newInstance() {
+    /*public static SimpleScannerFragment newInstance() {
         SimpleScannerFragment fragment = new SimpleScannerFragment();
         Log.i(TAG,"@@"+TAG+"##");//TAG===SimpleScannerFragment
+        return fragment;
+    }*/
+
+    public static SimpleScannerFragment newInstance() {
+        final SimpleScannerFragment fragment = new SimpleScannerFragment();
+        final Bundle args = new Bundle();
+        fragment.setArguments(args);
         return fragment;
     }
 
@@ -37,6 +44,12 @@ public class SimpleScannerFragment extends Fragment implements ZBarScannerView.R
         super.onResume();
         mScannerView.setResultHandler(this);
         mScannerView.startCamera();
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        mScannerView.stopCamera();
     }
 
     @Override
@@ -64,11 +77,7 @@ public class SimpleScannerFragment extends Fragment implements ZBarScannerView.R
         }, 2000);
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        mScannerView.stopCamera();
+    public void resumeScanner() {
+        mScannerView.resumeCameraPreview(SimpleScannerFragment.this);
     }
-
-
 }

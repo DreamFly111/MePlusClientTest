@@ -3,7 +3,7 @@ package duoy.cn.meplusclienttest.app;
 /**
  * Created by Dream on 2016/3/3.
  */
-public class MePlusApplication extends BaseApplication {//单例模式
+public class MePlusApplication extends ModelApplication {//单例模式
 
     private static MePlusApplication instance;//私有化对象
 

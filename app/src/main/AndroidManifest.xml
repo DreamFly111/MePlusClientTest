@@ -21,8 +21,13 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <!-- 基础模块 END -->
+
     <!-- bar code -->
     <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- PubNub Dependencies -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
 
     <!-- agora -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -71,6 +76,10 @@
             android:screenOrientation="portrait"/>
         <activity
             android:name=".activity.BaseActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".activity.ScannerActivity"
             android:screenOrientation="portrait"/>
 
         <!-- agora -->

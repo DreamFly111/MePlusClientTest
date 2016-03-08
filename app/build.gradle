@@ -35,7 +35,6 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.2.0'
 
     //FIR依赖
     compile 'im.fir:fir-sdk:latest.integration@aar'
@@ -48,17 +47,22 @@ dependencies {
     compile files('libs/jackson-annotations-2.7.0.jar')//自动生成
     compile files('libs/jackson-databind-2.4.5.jar')
 
-    compile 'com.marvinlabs:android-intents:1.5.1@aar'//导入
-    compile 'cn.trinea.android.common:trinea-android-common:4.2.15'//导入
+    compile 'org.greenrobot:eventbus:3.0.0'  //导入
+    compile 'com.jakewharton:butterknife:7.0.1'//导入
 
     //avoscloud-sdk 为 LeanCloud基础包
     compile 'cn.leancloud.android:avoscloud-sdk:v3.+'
-
-    compile 'me.dm7.barcodescanner:zbar:1.8.4'//二维码
-    compile 'org.greenrobot:eventbus:3.0.0'
-    compile 'com.jakewharton:butterknife:7.0.1'
-
+    //二维码
+    compile 'me.dm7.barcodescanner:zbar:1.8.4'
     compile project(':agora')
+    compile 'com.android.support:appcompat-v7:23.2.0'
+
+    compile 'com.marvinlabs:android-intents:1.5.1@aar'
+    compile 'cn.trinea.android.common:trinea-android-common:4.2.15'
+
+
+
+    compile 'com.android.support:support-v4:23.2.0'
 }
 
 
