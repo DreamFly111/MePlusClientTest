@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClick(View view){
         switch (view.getId()){
             case R.id.btnPNTest:
-                startActivity(IntentUtils.generateIntent(this,PNTestActivity.class));
+                startActivity(IntentUtils.generateIntent(this,PNActivity.class));
                 break;
             case R.id.btnAgoraTest:
                 startActivity(IntentUtils.generateIntent(this, EntryActivity.class));

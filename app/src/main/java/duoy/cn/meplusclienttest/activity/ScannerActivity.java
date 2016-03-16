@@ -18,13 +18,13 @@ public class ScannerActivity extends BaseActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scanner);
-        replaceContainer(R.id.frame_layout,SimpleScannerFragment.newInstance());
+        replaceContainer(R.id.frame_layout,SimpleScannerFragment.newInstance());//替换fragment
     }
 
-    @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onScannerEvent(ScannerEvent eventvent){
-        if(!Constants.sRelease){
-            final String content = eventvent.getContent();
+    @Subscribe(threadMode = ThreadMode.MAIN)//PubNub
+    public void onScannerEvent(ScannerEvent event){
+        if(!Constants.sRelease){//执行提示
+            final String content = event.getContent();
             ToastUtils.show(this,content);
         }
         SimpleScannerFragment scannerFragment = (SimpleScannerFragment)findFragmentById(R.id.frame_layout);

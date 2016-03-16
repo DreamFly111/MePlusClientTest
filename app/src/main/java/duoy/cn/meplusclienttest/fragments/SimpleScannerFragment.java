@@ -29,7 +29,7 @@ public class SimpleScannerFragment extends BaseFragment implements ZBarScannerVi
     public static SimpleScannerFragment newInstance() {
         final SimpleScannerFragment fragment = new SimpleScannerFragment();
         final Bundle args = new Bundle();
-        fragment.setArguments(args);
+        fragment.setArguments(args);//使用bundle传递参数，重建activity时数据不丢失，所以不用构造传参数
         return fragment;
     }
 

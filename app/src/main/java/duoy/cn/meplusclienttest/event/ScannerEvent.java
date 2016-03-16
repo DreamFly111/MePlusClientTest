@@ -6,6 +6,10 @@ package duoy.cn.meplusclienttest.event;
 public class ScannerEvent {
     private String content;
 
+    public ScannerEvent(String content){
+        this.content = content;
+    }
+
     public String getContent(){
         return content;
     }
@@ -14,7 +18,4 @@ public class ScannerEvent {
         this.content = content;
     }
 
-    public ScannerEvent(String content){
-        this.content = content;
-    }
 }

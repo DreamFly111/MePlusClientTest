@@ -24,7 +24,7 @@ public class LogoActivity extends BaseActivity implements Handler.Callback {
         if (msg.what == 1) {
             final User currentUser = User.getCurrentUser(User.class);
             if (currentUser == null) {
-                startActivity(IntentUtils.generateIntent(this, RegisterActivity.class));
+                startActivity(IntentUtils.generateIntent(this, LoginActivity.class));
             } else {
                 startActivity(IntentUtils.generateIntent(this, MainActivity.class));
             }

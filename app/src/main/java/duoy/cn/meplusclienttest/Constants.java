@@ -8,5 +8,8 @@ public class Constants {
     public static final String AVOS_APP_ID = "h5JzdkgqHLq5NYaddHdekG9N-gzGzoHsz";//未改变
     public static final String AVOS_APP_KEY = "zRyt5zcF6JtQCMU2V2psJ5rc";//未改变
 
+    public static final String PN_PUB_KEY = "pub-c-997f4c55-b4e7-46eb-b2e2-b90fed49c71e"; // MePlusClient PUBKey
+    public static final String PN_SUB_KEY = "sub-c-f380f5d0-c4a5-11e5-b764-02ee2ddab7fe"; // MePlusClient SUBkey
+
     public static final boolean sRelease = false;//是否显示提示，false则显示
 }

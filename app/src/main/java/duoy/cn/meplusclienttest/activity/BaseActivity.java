@@ -29,13 +29,18 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     public void replaceContainer(int containerViewId, android.support.v4.app.Fragment fragment){
-        final android.support.v4.app.FragmentManager fragmentManager = getSupportFragmentManager();//获取fragmentManager
-        final FragmentTransaction transaction = fragmentManager.beginTransaction();//开启事务
-        transaction.replace(containerViewId ,fragment);
+
+        // 获取fragmentManager
+        final FragmentManager fragmentManager = getSupportFragmentManager();
+        //开启事务
+        final FragmentTransaction transaction = fragmentManager.beginTransaction();
+        //替换
+        transaction.replace(containerViewId,fragment);
+        //提交
         transaction.commitAllowingStateLoss();
     }
-
     public Fragment findFragmentById(int containerViewId){
+        //获取fragmentManager
         final FragmentManager fragmentManager = getSupportFragmentManager();
         return fragmentManager.findFragmentById(containerViewId);
     }

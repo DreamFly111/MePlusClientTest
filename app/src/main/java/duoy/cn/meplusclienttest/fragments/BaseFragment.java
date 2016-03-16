@@ -14,7 +14,7 @@ public class BaseFragment extends android.support.v4.app.Fragment{
     private BaseActivity baseActivity;
 
     @Override
-    public void onAttach(Context context) {
+    public void onAttach(Context context) {//fragment已经关联到activity
         super.onAttach(context);
         baseActivity = (BaseActivity)context;
     }
@@ -26,7 +26,7 @@ public class BaseFragment extends android.support.v4.app.Fragment{
     }
 
     @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
+    public void onViewCreated(View view, Bundle savedInstanceState) {//?
         super.onViewCreated(view, savedInstanceState);
     }
 
